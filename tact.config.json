@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {
+            "name": "payouts",
+            "path": "./src/payouts.tact",
+            "output": "./output"
+        }
+    ]
+}

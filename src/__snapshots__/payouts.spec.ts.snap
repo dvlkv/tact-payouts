@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Payouts should burn completely 1`] = `
+[
+  {
+    "$seq": 1,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "text": "UCVAvkAKQCCn7CYC5oDzJww7/mYFJTKuGwzv7XbfuTQhsZXwBwjwd+ai9d8SUHujsjk/ji2v3XENWFVYrf/K1jLmUmcwgA==",
+            "type": "text",
+          },
+          "bounce": false,
+          "from": "@treasure(client)",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 1000000000n,
+        },
+      },
+      {
+        "$type": "failed",
+        "errorCode": 20020,
+        "errorMessage": "Not enough funds to withdraw",
+      },
+    ],
+  },
+]
+`;
+
+exports[`Payouts should deploy & topup 1`] = `
+[
+  {
+    "$seq": 0,
+    "events": [
+      {
+        "$type": "deploy",
+      },
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "text": "Topup",
+            "type": "text",
+          },
+          "bounce": false,
+          "from": "@owner",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 1000000000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 7081n,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Payouts should not withdraw twice 1`] = `
+[
+  {
+    "$seq": 3,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "text": "UCVAvkAKQCCn7CYC5oDzJww7/mYFJTKuGwzv7XbfuTQhsZXwBwjwd+ai9d8SUHujsjk/ji2v3XENWFVYrf/K1jLmUmcwgA==",
+            "type": "text",
+          },
+          "bounce": false,
+          "from": "@treasure(client)",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 1000000000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 65561n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "cell": "x{C41949DF000000000000000000000000000000000000000000000000000000012A05F2004_}",
+              "type": "cell",
+            },
+            "bounce": true,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+            "type": "internal",
+            "value": 923332000n,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    "$seq": 4,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "cell": "x{FFEB40DE000000000000000000000000000000000000000000000000000000012A05F200400A128FE2F818AF4A1202DCB07C4374ED1EF1F35DC49E9FAD6BD48BDFB08E74C404_}",
+            "type": "cell",
+          },
+          "bounce": true,
+          "from": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 911078000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 17912n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "text": "Already paid",
+              "type": "text",
+            },
+            "bounce": false,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "@treasure(client)",
+            "type": "internal",
+            "value": 891938000n,
+          },
+        ],
+      },
+    ],
+  },
+]
+`;
+
+exports[`Payouts should start burn 1`] = `
+[
+  {
+    "$seq": 1,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "text": "UCVAvkAKQCCn7CYC5oDzJww7/mYFJTKuGwzv7XbfuTQhsZXwBwjwd+ai9d8SUHujsjk/ji2v3XENWFVYrf/K1jLmUmcwgA==",
+            "type": "text",
+          },
+          "bounce": false,
+          "from": "@treasure(client)",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 1000000000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 65789n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "cell": "x{C41949DF000000000000000000000000000000000000000000000000000000009502F9004_}",
+              "type": "cell",
+            },
+            "bounce": true,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+            "type": "internal",
+            "value": 923104000n,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    "$seq": 2,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "cell": "x{FFEB40DE000000000000000000000000000000000000000000000000000000009502F900400A128FE2F818AF4A1202DCB07C4374ED1EF1F35DC49E9FAD6BD48BDFB08E74C40C_}",
+            "type": "cell",
+          },
+          "bounce": true,
+          "from": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 810646000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 18124n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "text": "Success",
+              "type": "text",
+            },
+            "bounce": false,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "@treasure(client)",
+            "type": "internal",
+            "value": 5791334000n,
+          },
+        ],
+      },
+    ],
+  },
+]
+`;
+
+exports[`Payouts should withdraw 1`] = `
+[
+  {
+    "$seq": 1,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "text": "UCVAvkAKQCCn7CYC5oDzJww7/mYFJTKuGwzv7XbfuTQhsZXwBwjwd+ai9d8SUHujsjk/ji2v3XENWFVYrf/K1jLmUmcwgA==",
+            "type": "text",
+          },
+          "bounce": false,
+          "from": "@treasure(client)",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 1000000000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 65561n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "cell": "x{C41949DF000000000000000000000000000000000000000000000000000000012A05F2004_}",
+              "type": "cell",
+            },
+            "bounce": true,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+            "type": "internal",
+            "value": 923332000n,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    "$seq": 2,
+    "events": [
+      {
+        "$type": "received",
+        "message": {
+          "body": {
+            "cell": "x{FFEB40DE000000000000000000000000000000000000000000000000000000012A05F200400A128FE2F818AF4A1202DCB07C4374ED1EF1F35DC49E9FAD6BD48BDFB08E74C40C_}",
+            "type": "cell",
+          },
+          "bounce": true,
+          "from": "kQCEU_9CZOdW0nEmPIFBeKm5TwUgQeZSSoGV5F-1NEfHVOro",
+          "to": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+          "type": "internal",
+          "value": 810874000n,
+        },
+      },
+      {
+        "$type": "processed",
+        "gasUsed": 18124n,
+      },
+      {
+        "$type": "sent",
+        "messages": [
+          {
+            "body": {
+              "text": "Success",
+              "type": "text",
+            },
+            "bounce": false,
+            "from": "kQBksBno6LW4bBwcshk5mhsJL-rBtRhxc1x4m8gg4DJjlvpq",
+            "to": "@treasure(client)",
+            "type": "internal",
+            "value": 10791562000n,
+          },
+        ],
+      },
+    ],
+  },
+]
+`;
